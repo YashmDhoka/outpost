@@ -11,7 +11,7 @@ import 'package:provider/provider.dart';
 import 'package:window_size/window_size.dart';
 
 import 'assets.dart';
-import 'title_screen/title_screen.dart';
+import 'routes/routes.dart' show router;
 
 void main() {
   if (!kIsWeb && (Platform.isWindows || Platform.isLinux || Platform.isMacOS)) {
@@ -33,10 +33,11 @@ class NextGenApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       themeMode: ThemeMode.dark,
       darkTheme: ThemeData(brightness: Brightness.dark),
-      home: const TitleScreen(),
+      // home: const TitleScreen(),
+      routerConfig: router,
     );
   }
 }

@@ -71,6 +71,11 @@ class OrbShaderWidgetState extends State<OrbShaderWidget>
     vsync: this,
     duration: 3000.ms,
   )..repeat();
+  @override
+  void dispose() {
+    _heartbeatAnim.dispose(); // Dispose the animation controller
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) => Consumer<FragmentPrograms?>(

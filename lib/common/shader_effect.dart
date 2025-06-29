@@ -20,8 +20,6 @@ import 'package:flutter_animate/flutter_animate.dart';
  * effects.dart file.
  */
 
-// TODO: document.
-
 /// An effect that lets you apply an animated fragment shader to a target.
 @immutable
 class ShaderEffect extends Effect<double> {

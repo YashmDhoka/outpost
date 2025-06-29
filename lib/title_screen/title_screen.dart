@@ -8,6 +8,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:go_router/go_router.dart' show GoRouterHelper;
 
 import '../assets.dart';
 import '../orb_shader/orb_shader_config.dart';
@@ -84,6 +85,12 @@ class _TitleScreenState extends State<TitleScreen>
     _pulseEffect.addListener(_handlePulseEffectUpdate);
   }
 
+  @override
+  void dispose() {
+    _pulseEffect.dispose(); // ✅ Dispose the controller here
+    super.dispose();
+  }
+
   void _handlePulseEffectUpdate() {
     if (_pulseEffect.status == AnimationStatus.completed) {
       _pulseEffect.reverse();
@@ -109,7 +116,11 @@ class _TitleScreenState extends State<TitleScreen>
     });
   }
 
-  void _handleStartPressed() => _bumpMinEnergy(0.3);
+  void _handleStartPressed() {
+    _bumpMinEnergy(0.3);
+    // GoRouter.of(context).push('/about');
+    context.go('/about');
+  }
 
   void _handleDifficultyFocused(int? value) {
     setState(() {
