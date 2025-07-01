@@ -1,0 +1,17 @@
+# Flutter & Dart
+.dart_tool/
+.build/
+.packages
+.pub-cache/
+.flutter-plugins
+.flutter-plugins-dependencies
+.melos_tool/
+
+# Web-related artifacts (if using Flutter Web)
+chrome-device/
+
+# macOS / iOS / Android / VS Code / IntelliJ artifacts (optional)
+.idea/
+.vscode/
+*.iml
+.DS_Store
