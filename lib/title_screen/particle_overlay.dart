@@ -18,7 +18,7 @@ class ParticleOverlay extends StatelessWidget {
   Widget build(BuildContext context) {
     return ParticleField(
       spriteSheet: SpriteSheet(
-        image: const AssetImage('assets/images/particle-wave.png'),
+        image: const AssetImage('/images/particle-wave.png'),
       ),
       // blend the image's alpha with the specified color:
       blendMode: BlendMode.dstIn,

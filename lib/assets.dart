@@ -6,7 +6,7 @@ import 'dart:ui';
 
 class AssetPaths {
   /// Images
-  static const String _images = 'assets/images';
+  static const String _images = '/images';
 
   static const String titleBgBase = '$_images/bg-base.jpg';
   static const String titleBgReceive = '$_images/bg-light-receive.png';
